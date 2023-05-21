@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="bootstrap.js"></script>
+    <style>
+        .container-fluid {
+        background: linear-gradient(230deg,red,deeppink,yellow,#850000);
+            border: 5px solid black;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(130deg, yellow, red, #850000, rgb(209, 107, 107), deeppink, skyblue);
+            border: 20px groove darkred;
+            margin: 10% auto;
+            perspective: 1000px;
+            box-shadow: 0px 0px 20px 5px gray;
+
+        }
+
+        .content {
+            margin: 1rem;
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            transition: transform 3.5s;
+            transform-style: preserve-3d;
+
+        }
+
+        .box:hover .content {
+            transform: rotateY(180deg);
+        }
+
+        .font,
+        .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            color: wheat;
+            background: url('logo.jpeg');
+            background-size: 100% 100%;
+            backface-visibility: hidden;
+            box-shadow: 1px 1px 5px 5px black,-1px -1px 5px 5px wheat,inset 1px 1px 5px 5px black,inset -1px -1px 5px 5px wheat;
+         text-align: center;
+            line-height: 250px;
+            font-size: 50px;
+            border: 15px ridge deeppink;
+        }
+
+        .back {
+            transform: rotateY('180deg');
+            color: wheat;
+            text-align: center;
+            line-height: 250px;
+            font-size: 50px;
+            background: url('actress.jpg');
+            background-size: 100% 100%;
+            border: 15px ridge rgb(58, 220, 58);
+            transform: rotateY(180deg);
+        }
+
+
+        .box1 {
+            margin: 1rem;           
+            width: 250px;
+            height: 200px;
+            background: linear-gradient(30deg, yellow, red, #850000, rgb(209, 107, 107), deeppink, skyblue);
+            border: 20px groove orangered;
+            box-shadow: 2px 2px 5px 5px black,-2px -2px 5px 5px wheat,inset 2px 2px 5px 5px black,inset -2px -2px 5px 5px wheat;
+       
+           
+        }
+        .img:hover {
+            transform: perspective(100px) rotateY(-340deg);
+        }
+
+        .box2 { box-shadow: 2px 2px 5px 5px black,-2px -2px 5px 5px wheat,inset 2px 2px 5px 5px black,inset -2px -2px 5px 5px wheat;
+       
+            margin: 1rem;
+            width: 250px;
+            height: 200px;
+            background: linear-gradient(30deg, yellow, red, #850000, rgb(209, 107, 107), deeppink, skyblue);
+            border: 20px groove orangered;
+            transition: transform 3s;
+        }
+        .img1:hover {
+            transform: perspective(100px) rotate3d(5,-35,10,690deg);
+        }
+
+        .box3 {
+            margin: 1rem; width: 250px;
+            box-shadow: 2px 2px 5px 5px black,-2px -2px 5px 5px wheat,inset 2px 2px 5px 5px black,inset -2px -2px 5px 5px wheat;
+            height: 200px;
+            background: linear-gradient(30deg, yellow, red, #850000, rgb(209, 107, 107), deeppink, skyblue);
+            border: 20px groove orangered;
+        }
+        .img2:hover {
+            transform: perspective(100px) rotateY(340deg);
+        }
+
+        .box4 { box-shadow: 2px 2px 5px 5px black,-2px -2px 5px 5px wheat,inset 2px 2px 5px 5px black,inset -2px -2px 5px 5px wheat;
+       
+            margin: 1rem;
+            width: 250px;
+            height: 200px;
+            background: linear-gradient(30deg, yellow, red, #850000, rgb(209, 107, 107), deeppink, skyblue);
+            border: 20px groove wheat;
+        }
+
+        .img3:hover {
+            transform: perspective(100px) rotate3d(2,-2,2,340deg);
+        }
+
+        .box5 {
+            margin: 1rem;
+            width: 250px;
+            box-shadow: 2px 2px 5px 5px black,-2px -2px 5px 5px wheat,inset 2px 2px 5px 5px black,inset -2px -2px 5px 5px wheat;
+            height: 200px;
+            background: linear-gradient(30deg, yellow, red, #850000, rgb(209, 107, 107), deeppink, skyblue);
+            border: 20px groove wheat;
+        }
+
+        .img4:hover {
+            transform: perspective(1000px) rotate3d(1,1,1,340deg);
+        }
+
+        .box6 {
+            margin: 1rem;
+            width: 250px;
+            box-shadow: 2px 2px 5px 5px black,-2px -2px 5px 5px wheat,inset 2px 2px 5px 5px black,inset -2px -2px 5px 5px wheat;
+            height: 200px;
+            background: linear-gradient(30deg, yellow, red, #850000, rgb(209, 107, 107), deeppink, skyblue);
+            border: 20px groove wheat;
+        }
+
+        .img5:hover {
+            transform: perspective(100px)  rotate3d(2,2,2,340deg);
+        }
+
+        .box7 {
+            margin: 1rem;
+            box-shadow: 2px 2px 5px 5px black,-2px -2px 5px 5px wheat,inset 2px 2px 5px 5px black,inset -2px -2px 5px 5px wheat;
+            width: 250px;
+            height: 200px;
+            background: linear-gradient(30deg, yellow, red, #850000, rgb(209, 107, 107), deeppink, skyblue);
+            border: 20px groove green;
+        }
+
+        .img6:hover {
+            transform: perspective(100px)  rotate3d(-1,-1,-1,340deg);
+        }
+
+        .box8 {
+            margin: 1rem;
+            width: 250px;
+            box-shadow: 2px 2px 5px 5px black,-2px -2px 5px 5px wheat,inset 2px 2px 5px 5px black,inset -2px -2px 5px 5px wheat;
+            height: 200px;
+            background: linear-gradient(30deg, yellow, red, #850000, rgb(209, 107, 107), deeppink, skyblue);
+            border: 20px groove green;
+        }
+
+        .img7:hover {
+            transform: perspective(100px) rotate3d(-1,1,1,340deg);
+        }
+
+        .row {
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="box">
+            <div class="content">
+                <div class="font"> </div>
+                <div class="back"></div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="box1">
+                <img class="img" src="actress1.jpeg" width="180px"
+                    style="
+         margin: 15px;border-radius: 10%;border: 10px double ;  transition: transform 3s;" height="130px" alt="">
+            </div>
+
+            <div class="box2">
+                <img class="img1" src="actor.jpeg" width="180px"
+                    style="border-radius: 10%;margin: 15px;border: 10px double black;  transition: transform 3s;" height="130px" alt="">
+            </div>
+
+            <div class="box3">
+                <img class="img2" src="actor1.jpeg" width="180px"
+                    style="margin: 15px;border-radius: 10%;border: 10px double black;  transition: transform 3s;" height="130px" alt="">
+            </div>
+            <div class="box4">
+                <img class="img3" src="actor2.jpeg" width="180px"
+                    style="margin: 15px;border-radius: 10%;border: 10px double black;  transition: transform 3s;" height="130px" alt="">
+            </div>
+            <div class="box5">
+                <img class="img4" src="actor3.jpeg" width="180px"
+                    style="margin: 15px;border-radius: 10%;border: 10px double black;  transition: transform 3s;" height="130px" alt="">
+            </div>
+            <div class="box6">
+                <img class="img5" src="actor4.jpeg" width="180px"
+                    style="margin: 15px;border-radius: 10%;border: 10px double black;  transition: transform 3s;" height="130px" alt="">
+            </div>
+            <div class="box7">
+                <img class="img6" src="actor5.jpeg" width="180px"
+                    style="margin: 15px;border-radius: 10%;border: 10px double black;  transition: transform 3s;" height="130px" alt="">
+            </div>
+            <div class="box8">
+                <img class="img7" src="actor6.jpeg" width="180px"
+                    style="margin: 15px;border-radius: 10%;border: 10px double black;  transition: transform 3s;" height="130px" alt="">
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
